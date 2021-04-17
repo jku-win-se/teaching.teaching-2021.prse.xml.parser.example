@@ -1,1 +1,1 @@
-# teaching.teaching-2021.prse.xml.parser.example
+# Java XML Parser using Stax + JAXBContext
