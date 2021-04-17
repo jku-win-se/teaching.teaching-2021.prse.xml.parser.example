@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+  <header>
+    <name>Programming Books</name>
+  </header>
+  <book id="1">
+    <author>John Darcy</author>
+    <title>Learning Java</title>
+  </book>
+  <book id="1">
+    <author>Peter Smith</author>
+    <title>Learning Scala</title>
+  </book>
+  <footer>
+    <records>2</records>
+  </footer>
+</books>
