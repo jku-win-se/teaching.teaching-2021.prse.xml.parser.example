@@ -5,7 +5,7 @@
   </header>
   <book id="1">
     <author>John Darcy</author>
-    <title>Learning Java</title>
+    <title>Learning <i>Java</i></title>
   </book>
   <book id="1">
     <author>Peter Smith</author>

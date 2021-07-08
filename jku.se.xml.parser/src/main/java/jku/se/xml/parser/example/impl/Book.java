@@ -1,9 +1,14 @@
 package jku.se.xml.parser.example.impl;
 
+import java.util.Collection;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /* Define therefore the following class to store the individual entries of the XML file */
 
@@ -16,7 +21,7 @@ public class Book {
 	@XmlElement
 	private String author;
 	
-	@XmlElement
+	@XmlAnyElement(TitleHandler.class)
 	private String title;
 	
 	public String getId() {
