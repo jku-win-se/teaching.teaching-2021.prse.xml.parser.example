@@ -41,7 +41,11 @@ public class ReadBooks {
         	JAXBElement<Book> boolElement = um.unmarshal(reader, Book.class);
             Book book = boolElement.getValue();
             if (book.getAuthor() != null) {  //skip footer tag
-                System.out.println("Id " + book.getId() + " " + book.getAuthor() + " wrote " + book.getTitle());
+                System.out.println("Id " + book.getId() + " "
+                		+ book.getAuthor() + " wrote " 
+                		+ book.getTitle()
+                		+ " and made this note: " + book.getNote()
+                	);
             }
  
             if (reader.getEventType() == XMLStreamConstants.CHARACTERS) {

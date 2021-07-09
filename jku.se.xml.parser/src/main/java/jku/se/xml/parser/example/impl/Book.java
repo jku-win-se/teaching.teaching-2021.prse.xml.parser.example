@@ -27,6 +27,9 @@ public class Book {
     @XmlJavaTypeAdapter(value = TitleHandlerAdapter.class)
 	private String title;
 	
+	@XmlElement
+	private String note;
+	
 	public String getId() {
 		return id;
 	}
@@ -37,6 +40,10 @@ public class Book {
 	
 	public String getTitle() {
 		return title;
+	}
+	
+	public String getNote() {
+		return note;
 	}
 
 }
