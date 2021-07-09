@@ -37,8 +37,8 @@ public class ReadBooks {
         }
  
         // read a book at a time
-        while (reader.getEventType() == XMLStreamConstants.START_ELEMENT) {
-            JAXBElement<Book> boolElement = um.unmarshal(reader, Book.class);
+        while (reader.getEventType() == XMLStreamConstants.START_ELEMENT) {   
+        	JAXBElement<Book> boolElement = um.unmarshal(reader, Book.class);
             Book book = boolElement.getValue();
             if (book.getAuthor() != null) {  //skip footer tag
                 System.out.println("Id " + book.getId() + " " + book.getAuthor() + " wrote " + book.getTitle());
@@ -48,6 +48,10 @@ public class ReadBooks {
                 reader.next();
             }
         } 
+        
+        
+        
+        
         reader.close();
 	}
 

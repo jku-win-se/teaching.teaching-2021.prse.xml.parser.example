@@ -16,9 +16,12 @@ public class TitleHandler implements DomHandler<String, StreamResult> {
 	
     private StringWriter xmlWriter = new StringWriter();
     
+    private String result;
+    
 	@Override
 	public StreamResult createUnmarshaller(ValidationEventHandler errorHandler) {
 		xmlWriter.getBuffer().setLength(0);
+		result = "";
 		return new StreamResult(xmlWriter);
 	}
 
@@ -28,9 +31,8 @@ public class TitleHandler implements DomHandler<String, StreamResult> {
         int beginIndex = xml.indexOf(TITLE_START_TAG) + TITLE_START_TAG.length();
         int endIndex = xml.indexOf(TITLE_END_TAG);
         if (beginIndex != -1 && endIndex != -1)
-        	return xml.substring(beginIndex, endIndex);
-        else
-        	return "";
+        	result = xml.substring(beginIndex, endIndex);        
+        return result;
 	}
 
 	@Override

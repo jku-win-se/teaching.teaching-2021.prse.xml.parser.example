@@ -14,6 +14,12 @@
   <book id="3">
   	<author>Michael L. Brodie</author>
   	<title>DARWIN: On the Incremental Migration of Legacy Information Systems</title>
+  	<note>NOTE</note>
+  </book>
+  <book id="4">
+  	<author>Joshua Bloch</author>
+  	<title>Effective Java</title>
+  	<note>NOTE</note>
   </book>
   <footer>
     <records>2</records>

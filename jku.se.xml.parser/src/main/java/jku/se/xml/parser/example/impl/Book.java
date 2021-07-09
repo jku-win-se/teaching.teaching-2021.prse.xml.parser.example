@@ -9,6 +9,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /* Define therefore the following class to store the individual entries of the XML file */
 
@@ -21,7 +23,8 @@ public class Book {
 	@XmlElement
 	private String author;
 	
-	@XmlAnyElement(TitleHandler.class)
+	@XmlElement(name = "title")
+    @XmlJavaTypeAdapter(value = TitleHandlerAdapter.class)
 	private String title;
 	
 	public String getId() {
