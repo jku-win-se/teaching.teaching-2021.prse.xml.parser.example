@@ -7,9 +7,13 @@
     <author>John Darcy</author>
     <title>Learning <i>Java</i></title>
   </book>
-  <book id="1">
+  <book id="2">
     <author>Peter Smith</author>
     <title>Learning Scala</title>
+  </book>
+  <book id="3">
+  	<author>Michael L. Brodie</author>
+  	<title>DARWIN: On the Incremental Migration of Legacy Information Systems</title>
   </book>
   <footer>
     <records>2</records>
